@@ -21,7 +21,7 @@ $(document).ready(function () {
   async function register() {
     try {
       nocust.addPrivateKey(ALICE_PRIV);
-      await nocust.registerWallet(ALICE_PUB);
+      //await nocust.registerWallet(ALICE_PUB);
       // Trigger a log upon an incoming transfer
       nocust.subscribe({
         address: ALICE_PUB,

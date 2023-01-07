@@ -5,6 +5,11 @@ $(document).ready(function () {
 
   var balance = 0;
 
+  async function initialBalance() {
+    balance = await nocust.getBalance(BOB_PUB);
+    $("#bob-balance").text('Balance: ' + balance);
+  }
+
   async function callBack(transfer) {
     console.log(transfer)
     console.log("Bob is receiving a transfer of " + transfer.amount + " wei from " + transfer.wallet.address);
@@ -35,7 +40,7 @@ $(document).ready(function () {
     try {
       nocust.addPrivateKey(BOB_PRIV);
       console.log("Added private key for Bob");
-      await nocust.registerWallet(BOB_PUB);
+      //await nocust.registerWallet(BOB_PUB);
       console.log("Registered for Bob");
       // Trigger a log upon an incoming transfer
       nocust.subscribe({
@@ -77,7 +82,7 @@ $(document).ready(function () {
     const tx = await nocust.transfer({
       from: BOB_PUB,
       to: ALICE_PUB,
-      amount: 0,
+      amount: val,
     });
 
     console.log("Transfer to Alice sent ! Transaction ID: ", tx.txId);
@@ -88,6 +93,7 @@ $(document).ready(function () {
   }
 
   register();
+  initialBalance();
 
   window.sendToALice = sendToALice;
   // window.getMoney = getMoney;
