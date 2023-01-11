@@ -1,6 +1,6 @@
 const HUB_CONTRACT_ADDRESS = "0xe263C67c412A374Ea24eC7075C3DdbdC89b1e381";
-const HUB_API_URL = "http://localhost/";
-const RPC_URL = "http://ganache.spear.technology:7545";
+const HUB_API_URL = "http://tartarus.spear.technology/";
+const RPC_URL = "http://tartarus.spear.technology:7545/";
 const AUSD_ADDRESS = "0x549BD80b7666e689b8f28FD554a66dC382E2388F";
 
 const nocust = getNocust();
