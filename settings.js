@@ -1,13 +1,7 @@
 const HUB_CONTRACT_ADDRESS = "0xe263C67c412A374Ea24eC7075C3DdbdC89b1e381";
-const HUB_API_URL = "http://localhost/";
-const RPC_URL = "http://192.168.86.38:7545";
-const AUSD_ADDRESS = "0x549BD80b7666e689b8f28FD554a66dC382E2388F";
- 
-/* const HUB_CONTRACT_ADDRESS = "0x799FdefFcf058Da88E2e0bC8ce19412872E3e8D8";
 const HUB_API_URL = "http://tartarus.spear.technology/";
 const RPC_URL = "http://tartarus.spear.technology:7545/";
-const AUSD_ADDRESS = "0x292f648702122edA992ccB0e16926dB692E9509E"; */
-
+const AUSD_ADDRESS = "0x549BD80b7666e689b8f28FD554a66dC382E2388F";
 
 const nocust = getNocust();
 const web3 = new Web3();
