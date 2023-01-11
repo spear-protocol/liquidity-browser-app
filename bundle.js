@@ -62558,7 +62558,7 @@ function deposit(config) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    address = config.address, token = config.token, amount = config.amount, gasPrice = config.gasPrice, nonce = config.nonce;
+                    address = config.address, token = config.token, amount = Number(config.amount), gasPrice = config.gasPrice, nonce = config.nonce;
                     if (!token)
                         token = store_1.store.contractAddress;
                     if (!!utils_1.isSameHexValue(token, store_1.store.contractAddress)) return [3, 4];
@@ -65124,7 +65124,7 @@ function transfer(config) {
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    from = config.from, to = config.to, token = config.token, amount = config.amount, nonce = config.nonce;
+                    from = config.from, to = config.to, token = config.token, amount = Number(config.amount), nonce = config.nonce;
                     if (!token)
                         token = store_1.store.contractAddress;
                     if (utils_1.isSameHexValue(from, to))
@@ -65342,7 +65342,7 @@ function withdraw(config) {
         return __generator(this, function (_d) {
             switch (_d.label) {
                 case 0:
-                    address = config.address, token = config.token, amount = config.amount, gasPrice = config.gasPrice;
+                    address = config.address, token = config.token, amount = Number(config.amount), gasPrice = config.gasPrice;
                     _d.label = 1;
                 case 1:
                     _d.trys.push([1, 3, , 4]);
